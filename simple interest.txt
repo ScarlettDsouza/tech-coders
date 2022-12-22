@@ -1,7 +1,5 @@
 //Program to calculate simple interest
-
 #include <stdio.h>
-
 int main()
 {
     int principle;
@@ -14,7 +12,5 @@ int main()
     scanf("%f",&time);
     interest_amount = principle * time * rate_of_interest / 100;
     printf("Simple Interest : %.2f", interest_amount);
-    
-
     return 0;
 }

@@ -1,0 +1,27 @@
+
+
+//Program to print four values in increasing order
+#include <stdio.h>
+
+int max(int x, int y){
+    return x > y ? x: y;
+}
+int min(int x, int y){
+    return x < y ? x : y;
+}
+
+int main()
+{
+   int a,b,c,d, maximum, minimum, mid1, mid2;
+   scanf("%d %d %d %d", &a, &b, &c, &d);
+   maximum = a>b && a>c && a>d ? a : (b>c && b>d?b:(c>d?c:d));
+   minimum = a<b && a<c && a<d ? a : (b<c && b<d?b:(c<d?c:d));
+   mid1 = min(max(a,b), max(c,d));
+   mid2 = a+b+c+d - (maximum+minimum+mid1);
+   if (mid1 < mid2)
+        printf("%d < %d < %d < %d", minimum, mid1, mid2, maximum);
+    else
+        printf("%d < %d < %d < %d", minimum, mid2, mid1, maximum);
+
+    return 0;
+}
