@@ -1,0 +1,17 @@
+//PROGRAM TO IMPLEMENT QSORT() FUNCTION
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+int compare(const void* a, const void* b){
+return *(char*)a - *(char*)b;
+}
+
+int main(){
+// int arr[] = {10,20, 11,12,13,17,300,100};
+char str[] = &quot;AasaiThambi&quot;;
+// qsort(arr, 8, 4, compare);
+qsort(str, 11,1, compare);
+puts(str);
+// for (int index = 0; index&lt;8; index++)
+// printf(&quot;%d &quot;, arr[index]);
+return 0;
+}

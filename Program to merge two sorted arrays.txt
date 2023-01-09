@@ -1,0 +1,30 @@
+#include<stdio.h>
+//Program to merge two sorted arrays
+int main()
+{
+int a[] = {1,2,3,4,5,9,10};
+int b[] = {4,5,6,7};
+int sizea, sizeb, i,j,k;
+sizea = sizeof(a)/sizeof(a[0]);
+sizeb = sizeof(b) / sizeof(b[0]);
+int c[sizea+sizeb];
+//merging two sorted arrays
+for (i = 0, j= 0, k=0;i&lt;sizea &amp;&amp; j &lt;sizeb;k++){
+
+if (a[i]&lt; b[j])
+c[k] = a[i++];
+else
+c[k] = b[j++];
+}
+//checking whether first array having any elements left
+while (i&lt;sizea)
+c[k++] = a[i++];
+//checking whether second array having any elements left
+while (j&lt;sizeb)
+c[k++] = b[j++];
+//printing the merged array elements
+for (int index = 0; index&lt;sizea+sizeb; index++)
+printf(&quot;%d &quot;, c[index]);
+
+return 0;
+}
