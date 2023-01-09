@@ -1,6 +1,6 @@
 //PROGRAM TO IMPLEMENT QSORT() FUNCTION
-#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
+#include<stdio.h>
+#include<stdlib.h>
 int compare(const void* a, const void* b){
 return *(char*)a - *(char*)b;
 }
