@@ -6,7 +6,7 @@ int main()
     scanf("%s%n",str,&len);
     for(int i=len;i>=1;i--)
     printf("%-*.*s%*.*s\n",len,i,str,len,i,str);
-    for(int i=len;i>=1;i++)
+    for(int i=len;i<=1;i++)
     printf("%-*.*s%*.*s\n",len,i,str,len,i,str);
     return 0;
 }
